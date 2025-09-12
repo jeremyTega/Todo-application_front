@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+} */
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     min-height: 100vh;  
+     width: 100vw;          
+    background: url("../assets/regToDo.png") no-repeat center center fixed;
+    background-color: #0000;
+    background-size: cover;
+    overflow: hidden;
+
+}
+.registration-container {
+   padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(241, 238, 238, 0.1);
+  width: 350px;
+  height: 450px;
+
+}
+
+.registration-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fbf4f4;
+}
+
+.registration-container form div {
+  margin-bottom: 15px;
+}
+
+.registration-container label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #faf7f7;
+}
+
+.registration-container input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registration-container button {
+  width: 50%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration-container button:hover {
+  background: #1d5320;
+}
+
+button {
+  display: block;
+  margin: 20px auto 0 auto; 
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-text {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff; /* or a lighter shade for your dark bg */
+  font-size: 14px;
+}
+
+.login-link {
+  color: #4caf50; /* same green as your button */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 10px;
+}
+
+button[disabled] {
+  background: #aaa;
+  cursor: not-allowed;
+}
