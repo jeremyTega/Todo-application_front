@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100vw;
+    background: url('../../assets//loginimg.png')no-repeat center center fixed;
+    background-size: cover;
+    background-color: #0000;
+    
+
+}
+.login-container{
+    padding: 2rem;
+    border-radius: 8px;
+    width: 350px;
+    height: 350px;
+    /* background-color: blue; */
+    box-shadow: 0px 4px 15px rgba(241, 238, 238, 0.1);
+
+}
+
+.login-container h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.login-container form div {
+    margin-bottom: 20px;
+}
+
+.login-container label{
+    display: flex;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.login-container input{
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+.login-container button {
+  width: 50%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #1d5320;
+}
+
+button {
+  display: block;
+  margin: 20px auto 0 auto; 
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.board-text {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff; /* or a lighter shade for your dark bg */
+  font-size: 14px;
+}
+
+.board-link {
+  color: #4caf50; /* same green as your button */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.board-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 10px;
+}
+
+button[disabled] {
+  background: #aaa;
+  cursor: not-allowed;
+}

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
-function RegistrationPage() {
+const RegistrationPage = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -100,7 +100,7 @@ function RegistrationPage() {
             />
           </div>
 
-          {/* 🔹 Success & Error Messages */}
+         
           {error && <p className="error-message">{error}</p>}
           {success && <p className="success-message">{success}</p>}
 
