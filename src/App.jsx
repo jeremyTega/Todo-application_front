@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom";
-import RegistrationPage from "./componets/RegistrationPage";
-import LoginPage from "./componets/LoginPage"; 
+import { Routes, Route } from 'react-router-dom';
+import RegistrationPage from './componets/Registration/RegistrationPage';
+import LoginPage from './componets/Login/LoginPage';
 
 function App() {
   return (
