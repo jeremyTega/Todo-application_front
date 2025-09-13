@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import log from '../utils/logger';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -10,7 +11,7 @@ const LoginPage = () => {
   const [loading, setLoading] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     setEmail('');
@@ -20,17 +21,25 @@ const LoginPage = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     setLoading(false);
-    setError("");
-    setSuccess("");
+    setError('');
+    setSuccess('');
     try {
       const response = await axios.post('http://localhost:8081/api/v1/login', {
         email,
         password,
       });
+      const { token, user } = response.data;
+      const userName = user.username;
+      log(userName)
+      localStorage.setItem('username', userName)
+      localStorage.setItem('token', token);
+
+      log(token);
       setSuccess('Login successful');
       setEmail('');
       setPassword('');
-      console.log(response.data);
+      log(response.data);
+
       setTimeout(() => {
         navigate('/task-board');
       }, 1500);
@@ -54,11 +63,12 @@ const LoginPage = () => {
 
   return (
     <div className="login-wrapper">
-       <motion.div
-       className="login-container"
-       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}>
+      <motion.div
+        className="login-container"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1>Login</h1>
 
         <form onSubmit={submitForm}>
